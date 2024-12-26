@@ -24,5 +24,11 @@ const welcomeMsg = {
   api_version: "1.0.0",
 };
 
+const cookie_options = {
+  httpOnly: true,
+  secure: true,
+  signed: true,
+};
+
 // exports
-export { welcomeMsg };
+export { welcomeMsg, cookie_options };

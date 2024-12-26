@@ -4,6 +4,7 @@ import connecTodb from "./Config/db-config.js";
 import envConfig from "./Config/env-config.js";
 import { welcomeMsg } from "./utils/constants-util.js";
 
+
 // --> inital [home] route & wrong path redirect
 app.get(`${envConfig.EndPoint}`, (req, res) => {
   res.status(200).send(welcomeMsg);
@@ -14,7 +15,7 @@ app.get("*", (req, res) => {
 });
 
 // --> error handleing middleware
-app.use((req, res, next) => {
+app.use((err,req, res, next) => {
   const path = req.path;
   res.status(404).send({
     status: 404,
