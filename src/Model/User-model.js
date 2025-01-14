@@ -40,6 +40,10 @@ const UserSchema = new Schema(
       // }
     },
     refreshtoken: { type: String, trim: true },
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
